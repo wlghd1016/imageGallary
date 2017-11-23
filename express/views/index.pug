@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    div#map(style="width:100%;height:400px;")
+    form( method = "POST" )
+        div
+            label= "x : "    
+            input(type="text" name="x")
+        div
+            label= "y : "
+            input(type="text" name="y")
+        div
+            label= "z : "
+            input(type="text" name="z")
+        input(type="file" name="image")
+        input#imageSubmitBtn(type="button" name="submit" value="파일 전송")
